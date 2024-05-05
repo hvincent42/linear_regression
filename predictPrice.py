@@ -48,11 +48,11 @@ def main():
 
     normMileage = (mileageInput - min(mileage)) / (max(mileage) - min(mileage))
 
-    result = theta1 * normMileage + theta0
+    result = theta0 + (theta1 * normMileage)
     
     result = result * (max(price) - min(price)) + min(price)
 
-    print(f"The estimated price of the car is with a mileage of {int(mileageInput)} is", int(result))
+    print(f"The estimated price of a car with a mileage of {int(mileageInput)} is", int(result))
 
 
 if __name__ == "__main__":
